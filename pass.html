@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>パスワードページ</title>
+    <style>
+        /* 背景画像 */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: url('gazou.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* ボタンを縦に並べる */
+        }
+
+        /* ボタンの共通スタイル */
+        .button {
+            padding: 10px 20px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 0; /* ボタン間のスペース */
+            width: 200px; /* ボタンの横幅を統一 */
+        }
+
+        /* HOMEボタン */
+        .home-button {
+            background-color: #4CAF50;
+        }
+
+        .home-button:hover {
+            background-color: #45a049;
+        }
+
+        /* DISCORDボタン */
+        .discord-button {
+            background-color: #7289DA; /* Discordのブランドカラー */
+        }
+
+        .discord-button:hover {
+            background-color: #5b6e98;
+        }
+
+        /* パスワード入力フォームのスタイル */
+        .password-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5); /* 背景を半透明で覆う */
+        }
+
+        .password-form {
+            background-color: rgba(255, 255, 255, 0.8); /* 白い背景、少し透過 */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+        }
+
+        .password-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .password-form button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .password-form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- HOMEボタン -->
+    <button class="button home-button" onclick="location.href='index.html'">HOME</button>
+
+    <!-- DISCORDボタン -->
+    <button class="button discord-button" onclick="window.location.href='https://discord.com/invite/5HYCe2pp4W'">DISCORD</button>
+
+    <div class="password-container">
+        <div class="password-form">
+            <h2>パスワードを入力してください</h2>
+            <input type="password" id="password" placeholder="パスワード" required>
+            <button onclick="checkPassword()">ログイン</button>
+        </div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            
+            if (password === "4918500385") {
+                window.location.href = "p1.html";
+            } else if (password === "4313034918") {
+                window.location.href = "p2.html";
+            } else {
+                alert("パスワードが間違っています。");
+            }
+        }
+    </script>
+</body>
+</html>
